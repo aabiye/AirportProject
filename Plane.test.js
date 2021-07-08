@@ -13,11 +13,11 @@ describe('Plane objects', () => {
 
     test('plane has origin destination', () => {
         flight1.setOrigin(originAirport1)
-        expect(flight1.origin.name).toBe("DFW");
+        expect(flight1.origin).toMatchObject(originAirport1);
     })
 
     test('Plane has destination', () => {
         flight1.setDestination(destAirport1);
-        expect(flight1.destination.name).toBe("JFK");
+        expect(flight1.destination).toMatchObject(destAirport1);
     })
 })

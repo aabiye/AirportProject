@@ -1,16 +1,10 @@
-const Bag = require('./Bag');
+const Bag = require('./Bag')
 
 describe('Bag objects', () => {
 
-    test('has a weight', () => {
-        const carryonbag = new Bag(15);
-        expect(carryonbag.weight).toBe(15);
+    const carryonbag = new Bag(16)
+
+    test('bag has weight', () => {
+        expect(carryonbag.weight).toBe(16)
     })
-
-} )
-
-
-
-
-
-
+})

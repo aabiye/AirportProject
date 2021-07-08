@@ -5,7 +5,7 @@ describe('Passenger Object', () => {
 
 	const passenger1 = new Passenger("Aden");
 	const passengerBag = new Bag(15);
-
+	
 	test('Passenger has a name', () => {
 		expect(passenger1.name).toBe("Aden");
 	})
