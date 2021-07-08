@@ -1,0 +1,10 @@
+As a passenger, I want to get my boarding pass, by entering my confimation number
+
+As a passenger, I want to check in my bags, by going to the ticket counter 
+
+As a passenger, I want to be pass through security, by proving my boarding pass  
+
+As a passenger, I want to board plane, by reaching the gate 
+
+
+
