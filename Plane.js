@@ -1,9 +1,13 @@
+const Passenger = require('./Passenger');
+const Crew = require('./Crew');
+
 class Plane {
     constructor(flightNum) {
         this.flightNum = flightNum;
 		this.origin = '';
 		this.destination = '';
-		this.passengers = [];
+        this.passengers = [];
+        this.crews = []; 
     }
 
     setOrigin(originairport) {
@@ -14,8 +18,12 @@ class Plane {
         this.destination = destairport;
     }
 
-    addPassengers(passenger) {
-        this.passengers.push(passenger);
+    boardPassenger(person) {
+        if (person instanceof Passenger) {
+            this.passengers.push(person);
+        } else {
+            this.crews.push(person);            
+        }
     }
 }
 

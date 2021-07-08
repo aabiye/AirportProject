@@ -1,17 +1,20 @@
-const Passenger = require('./Passenger');
-const Bag = require('./Bag');
+const Passenger = require('./Passenger')
 
-describe('Passenger Object', () => {
+describe('Passenger name', () => {
+    const pass1 = new Passenger("Hanna")
 
-	const passenger1 = new Passenger("Aden");
-	const passengerBag = new Bag(15);
-	
-	test('Passenger has a name', () => {
-		expect(passenger1.name).toBe("Aden");
-	})
+    test('pass has name',() => {
+        expect(pass1.name).toBe("Hanna")
+    })
 
-	test('Passenger has a bag', () => {
-		passenger1.addBag(passengerBag);
-		expect(passenger1.bags.length).toBe(1);
-	})
+    test('instanceof', () => {
+        expect(pass1 instanceof Passenger).toBeTruthy;
+    })
+
+    test('callAttendant', () => {
+        console.log = jest.fn();
+
+        pass1.callAttendant();
+        expect(console.log).toHaveBeenCalledWith("Excuse me, Hay there!");
+    })
 })
